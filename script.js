@@ -9,6 +9,8 @@ var maxLenth = 128;
 // var num = true;
 // var specCh = true;
 
+var lChChoices = ["a", "b", "c", "d", "e"]
+
 // Add console.log typeof
 console.log(typeof createPw);
 console.log(typeof minLength);
