@@ -84,35 +84,33 @@ function gatherCrit() {
 // Idenitfy desired criteria 
 // and makes sure at least one criteria is selected; while loop, change condition to exit
 // Pull desired criteria from array(s) 
-function arrExtr() {
-if(lowLet == true) {
+// if user criteria is used, pull from critArray
+// Join into new array
+// Randomly select characters from new array to create password based on length criteria
 
+function arrExtr() {
+  var newArray = true;
+if(lowLet == true) {
+  var aIndex = Math.floor(Math.random() * 26);
+  lChArr[aIndex];
 }
 if(upLet == true) {
-  
+  var uIndex = Math.floor(Math.random() * 26);
+  upChArr[uIndex].toUpperCase;
 }
 if(num == true) {
   
+  var numIndex = Math.floor(Math.random() * 10);
+  intArr[numIndex];
 }
 if(spCh == true) {
-  
+  var spIndex = Math.floor(Math.random() * 14);
+  spChArr[spIndex];
 }
 
 }
 
-//if var
 
-var aIndex = Math.floor(Math.random() * 26);
-lChArr[aIndex];
-
-var uIndex = Math.floor(Math.random() * 26);
-upChArr[uIndex].toUpperCase;
-
-var numIndex = Math.floor(Math.random() * 10);
-intArr[numIndex];
-
-var spIndex = Math.floor(Math.random() * 14);
-spChArr[spIndex];
 
 
 // Save to string/array var
