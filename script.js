@@ -89,30 +89,29 @@ function gatherCrit() {
 // Randomly select characters from new array to create password based on length criteria
 
 function arrExtr() {
-  var newArray = true;
+  var newArray = [];
 if(lowLet == true) {
   var aIndex = Math.floor(Math.random() * 26);
-  lChArr[aIndex];
+  newArray.push(lChArr[aIndex]);
 }
 if(upLet == true) {
   var uIndex = Math.floor(Math.random() * 26);
-  upChArr[uIndex].toUpperCase;
+  newArray.push(upChArr[uIndex].toUpperCase);
 }
 if(num == true) {
-  
   var numIndex = Math.floor(Math.random() * 10);
-  intArr[numIndex];
+  newArray.push(intArr[numIndex]);
 }
 if(spCh == true) {
   var spIndex = Math.floor(Math.random() * 14);
-  spChArr[spIndex];
+  newArray.push(spChArr[spIndex]);
 }
-
 }
 
 
 
 
 // Save to string/array var
+// Make 
 // Populate password into placeholder
 // doc queryselect 
