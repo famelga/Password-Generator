@@ -9,37 +9,13 @@ var maxLenth = 128;
 // var num = true;
 // var specCh = true;
 
-var lChArr = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f'",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
-var spChArr =
-  // Add console.log typeof
-  console.log(typeof createPw);
+var lChArr = ["a", "b", "c", "d", "e", "f'", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+String(lChArr).toUpperCase;
+var intArr = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var spChArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "?", ":", ";", "+"];
+
+// Add console.log typeof
+console.log(typeof createPw);
 console.log(typeof minLength);
 console.log(typeof maxLenth);
 // console.log(typeof lowerCase);
@@ -119,8 +95,9 @@ function generatePassword() {}
 generateBtn.addEventListener("click", writePassword);
 
 // Gather password criteria
-// Idenitfy desired criteria and makes sure at least one criteria is selected
-// Pull desired criteria from array(s)
+// Idenitfy desired criteria 
+// and makes sure at least one criteria is selected; while loop, change condition to exit
+// Pull desired criteria from array(s) 
 // Save to string/array var
 // Populate password into placeholder
 // doc queryselect 
