@@ -12,21 +12,11 @@
 
 [Visit the Deployed Site](https://famelga.github.io/Password-Generator/)
 
-To be considered as a good candidate for an open position, I have created an deployed a portfolio of work samples. 
+In order to generate a random password, employees are able to use this website.
 
-To begin, I started with a wireframe to organize my homepage, as well as my html code. I found that labeling tags on my wireframe made it easier to format which tags to use in my html code since I knew where to place content.
+I first used psuedo-code to plan which functions would be necessary. The first step was to create a prompt and confirms in a function that required employees to select their password  criteria. Since employees are required to create passwords with specific lengths and at least one character criteria, I included the prompt and confirms with a "while." The while will loop each question the previous one if the criteria requirements aren't satified.
 
-I was able to link titles in the navigation bar to corresponding sections through the use of hrefs and id selectors. Similarily, deploy links to prior work were linked to images by linking hrefs with the deploy links to the matchign images. 
 
-In CSS, I created a variable for the color purple since that color would be used on most texts. If I decide to change my primary color, I could easily apply this change from purple to my new color by adjusting only the one variable code. 
-
-While there were some formatting issues with html, most of my challenges arised in CSS- particularily, flexboxes. I had misunderstood divs to be irrelevant in html code since they are not specific; however, they are essential to creating sections within html that can be styled by flexboxes in css. After multiple trial-and-error of positions, aligning, displays, I was finally able to get flexboxes to properly style my sections by adding divs to html. Divs allowed for parent, child, and sibling boxes to exist and use flex display. 
-
-Once I was able to add the flex properties use divs, it was more simple to use media queries for responsive layouts that adapt to varying viewports.
-
-Ultimately, I learned the importance of divs in relation to flexboxes. 
-
-![Portfolio Homepage gif](./Portfolio%20gif.gif)
 
 ## Portfolio Example
 
@@ -94,7 +84,7 @@ This change led to the addition of "display: flex" and flexbox properties to the
 Visit website.
 
 
-![Portfolio Homepage](./Homepage.jpg)
+![Portfolio Homepage](assets/img/PW%20Gen.jpg)
 
 
 
