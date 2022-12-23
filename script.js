@@ -26,7 +26,6 @@ function gatherCrit() {
   while (validPasswordLength == false) {
     // Passing a string through the function prompt which returns a value that is saved to userlength
     var userlength = prompt("Enter password length. Must be between 8-128 characters in length.");
-    // var userlength = prompt("Enter password length. Must be between 8-128 characters in length.");
     if (userlength >= minLength && userlength <= maxLenth) {
       validPasswordLength = true;
     } else {
@@ -80,28 +79,7 @@ function generatePassword() {
   
   for (var i = 0; i < userlength; i++) {
     newArray.length = Math.floor(Math.random() * userCrit.length);
-  //   switch (userCrit) {
-  //     case "lower":
-  //       var aIndex = Math.floor(Math.random() * 26);
-  //       newArray.concat(lChArr[aIndex]);
-  //       break;
-  //     case "upper":
-  //       var uIndex = Math.floor(Math.random() * 26);
-  //       newArray.concat(upChArr[uIndex].toUpperCase);
-  //       break;
-  //     case "number":
-  //       var numIndex = Math.floor(Math.random() * 10);
-  //       newArray.concat(intArr[numIndex]);
-  //       break;
-  //     case "special":
-  //       var spIndex = Math.floor(Math.random() * 14);
-  //       newArray.concat(spChArr[spIndex]);
-  //       break;
-  //     default:
-  //       console.log("error in switch statement");
-  //   }
-  // }
-  // return newArray;
+
 }
 }
 var generateBtn = document.querySelector("#generate");
