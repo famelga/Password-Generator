@@ -9,7 +9,7 @@ var maxLenth = 128;
 // var num = true;
 // var specCh = true;
 
-var lChChoices = [
+var lChArr = [
   "a",
   "b",
   "c",
@@ -37,7 +37,7 @@ var lChChoices = [
   "y",
   "z",
 ];
-var spCh =
+var spChArr =
   // Add console.log typeof
   console.log(typeof createPw);
 console.log(typeof minLength);
@@ -90,7 +90,7 @@ function writePassword() {
   var num = confirm("Include numbers");
   
 
-  spCh = confirm("Include special character");
+  var spCh = confirm("Include special character");
   
 
   var gnPw = confirm("Generate password");
@@ -107,7 +107,7 @@ function writePassword() {
   //   if (maxLenth > 128) {
   //     console.log("Password may not exceed 128 characters.");
   // }
-  else var password = generatePassword();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -117,3 +117,10 @@ function generatePassword() {}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Gather password criteria
+// Idenitfy desired criteria and makes sure at least one criteria is selected
+// Pull desired criteria from array(s)
+// Save to string/array var
+// Populate password into placeholder
+// doc queryselect 
