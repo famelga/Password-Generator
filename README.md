@@ -20,64 +20,65 @@ I first used psuedo-code to plan which functions would be necessary. The first s
 
 ## Portfolio Example
 
-Initially, I did not have any divs in my html code since I believed divs to be irrelevant due to lack of semantics and accessability.
+Below, I added the and if requirements.
 
 
-```<section id="Work" class="sections">
-                <h2>Work</h2>
-                    <p class="c1">Landing Page</p>
-                    <a href="https://famelga.github.io/Landing-Page/" target="_blank"><img src="./LandingPage.png"
-                            alt="Yellow website homepage with image of a nebula" class="pic1"></a>
-                    <p class="c2">Code Refactor</p>
-                    <a href="https://famelga.github.io/code-refactor-site/" target="_blank"><img src="./Horiseon.png"
-                            alt="Horiseon blue and white homepage" class="pic2"></a>
-                    <p class="c2">CSS Cheatsheet</p>
-                    <a href="https://famelga.github.io/Mini-project-2/" target="_blank"><img src="./Cheatsheet.png"
-                            alt="Gray website of css cheatsheet snippets" class="pic2"></a>
-        </section>
+```function gatherCrit() {
+  // Create boolean variable
+  var validPasswordLength = false;
+  //Repeating loop till criteria is met
+  while (validPasswordLength == false) {
+    // Passing a string through the function prompt which returns a value that is saved to userlength
+    var userlength = prompt("Enter password length. Must be between 8-128 characters in length.");
+    // var userlength = prompt("Enter password length. Must be between 8-128 characters in length.");
+    if (userlength >= minLength && userlength <= maxLenth) {
+      validPasswordLength = true;
+    } else {
+      alert("Password must be between " + minLength + " and " +  maxLenth + " characters");
+    }
+  }
 ```
 
-Adding the below div tags with classes created sections for Flexboxes to be abpplied to in css. (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+Here, the confirms are also in a while. In comparison to the prompt, the confirms need a logical or so that at least one criteria is selected.
 
 ```
-html
-<section id="Work" class="sections">
-            <div class="Projh2">
-                <h2>Work</h2>
-            </div>
-            <div class="work">
-                <div class="work-content">
-                    <p class="c1">Landing Page</p>
-                    <a href="https://famelga.github.io/Landing-Page/" target="_blank"><img src="./LandingPage.png"
-                            alt="Yellow website homepage with image of a nebula" class="pic1"></a>
-                </div>
-                <div class="work-content">
-                    <p class="c2">Code Refactor</p>
-                    <a href="https://famelga.github.io/code-refactor-site/" target="_blank"><img src="./Horiseon.png"
-                            alt="Horiseon blue and white homepage" class="pic2"></a>
-                    <p class="c2">CSS Cheatsheet</p>
-                    <a href="https://famelga.github.io/Mini-project-2/" target="_blank"><img src="./Cheatsheet.png"
-                            alt="Gray website of css cheatsheet snippets" class="pic2"></a>
-                </div>
-            </div>
-        </section>
+  while (chCritMet == false) {
+    // Passing string through the function confirm which returns a boolean value that is stored in its assigned var
+    var lowLet = confirm("Include lowercase letters");
+    // if the user wants lowercase letters, add "lower" to criteria array
+    if (lowLet == true) {
+      userCrit.concat(lChArr);
+    }
+    // Passing string through the function confirm which returns a boolean value that is stored in its assigned var
+    var upLet = confirm("Include uppercase letters");
+    // / if the user wants uppercase letters,
+    if (upLet == true) {
+      // add "upper" to criteria array
+      userCrit.concat(upChArr);
+    }
+    // Passing string through the function confirm which returns a boolean value that is stored in its assigned var
+    var num = confirm("Include numbers");
+    // / if the user wants numbers,
+    if (num == true) {
+      // add "number" to criteria array
+      userCrit.concat(intArr);
+    }
+    // Passing string through the function confirm which returns a boolean value that is stored in its assigned var
+    var spCh = confirm("Include special character");
+    // if the user wants special characters,
+    if (spCh == true) {
+      // add "special" to criteria array
+      userCrit.concat(spChArr);
+    }
+
+    if (lowLet == true || upLet == true || num == true || spCh == true) {
+      chCritMet = true;
+    } else {
+      alert("At least one character criteria must be selected.");
+    }
+  }
 ```
 
-This change led to the addition of "display: flex" and flexbox properties to the classes of the added divs.  
-
-```css
-.work {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.work-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-```
 
 ## Usage 
 
@@ -87,12 +88,6 @@ Visit website.
 ![Portfolio Homepage](assets/img/PW%20Gen.jpg)
 
 
-
-## Learning Points 
-
-Through the creation on my portfolio, I learned the importance of wireframes in relation to coding html. Labeling tags on wireframes helps with organization.
-
-Prior to this project, I did not recognize the impact div tags have on the formatting of a webpage. I now understand that creating sections of code in html using divs, allows for the implementation of flexboxes in css.
 
 ## Author Info
 
@@ -109,7 +104,7 @@ Prior to this project, I did not recognize the impact div tags have on the forma
 
 Fayven Amelga
 
-MDN Web Docs - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox 
+
 
 
 ## License
