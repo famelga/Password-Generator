@@ -2,7 +2,7 @@
 
 // Add var for each series of prompts
 var createPw = true;
-var minLength = 8
+var minLength = 8;
 var maxLenth = 128;
 // var lowerCase = true;
 // var upperCase = true;
@@ -27,6 +27,7 @@ console.log(maxLenth >= minLength)
 var expression1 = (minLength <= maxLenth);
 var expression2 = (maxLenth >= minLength);
 
+
 console.log(expression1 && expression2);
 
 
@@ -36,17 +37,26 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 
 function writePassword(e) {
-  // Add prompt to eventListener
-  generateBtn = prompt("Enter password length. Must be between 8-128 characters in length.");
-  console.log("alert")
+  // Add prompt to var length
+  var length = prompt("Enter password length. Must be between 8-128 characters in length.");
+  if (length >= minLength && length <= maxLenth) {
+    lowLet;
+  } else if(length < minLength || length > maxLenth) {
+    alert("Password must be between "+ minLength + " and "+ maxLenth + " characters");
+    return length;
+  } 
+  var lowLet = confirm("Include lowercase letters");
 
-  if (expression1 && expression2) {
-    return characterType
-  }
+  generateBtn = confirm("Include uppercase letters");
+  generateBtn = confirm("Include numbers");
+  generateBtn = confirm("Include special character");
+  generateBtn = confirm("Generate password")
 
-  function characterType() {
-    generateBtn = confirm("Include lowercase letters?")
-  }
+
+
+  // function characterType() {
+  //   generateBtn = confirm("Include lowercase letters?")
+  // }
 //   if (minLength < 8) {
 
 //     console.log("Password must be at least 8 characters.");
