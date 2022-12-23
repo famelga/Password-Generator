@@ -1,7 +1,7 @@
 // Assignment code here
 
 // Add var for each series of prompts
-var createPw = true;
+var critMet = true;
 var minLength = 8;
 var maxLenth = 128;
 // var lowerCase = true;
@@ -42,55 +42,70 @@ function writePassword() {
   var validPasswordLength = false;
   // Add var for prompts and confirms
   while (validPasswordLength == false) {
-    var length = prompt(
-      "Enter password length. Must be between 8-128 characters in length."
-    );
+    var length = prompt("Enter password length. Must be between 8-128 characters in length.");
     if (length >= minLength && length <= maxLenth) {
       validPasswordLength = true;
     } else {
-      alert(
-        "Password must be between " +
-          minLength +
-          " and " +
-          maxLenth +
-          " characters"
-      );
+      alert("Password must be between " + minLength +  " and " +  maxLenth + " characters");
     }
   }
 
   var lowLet = confirm("Include lowercase letters");
- 
+  if(lowLet = true) {
+    lChArr.includes()
+  } else {
+
+  }
 
   var upLet = confirm("Include uppercase letters");
-  
+  if(upLet = true) {
+String(lChArr).includes()
+  } else {
+
+  }
 
   var num = confirm("Include numbers");
-  
+  if(num = true) {
+
+  } else {
+
+  }
 
   var spCh = confirm("Include special character");
-  
+  if(spCh = true) {
+  spChArr.includes()
+  } else {
 
-  var gnPw = confirm("Generate password");
-  
+  }
 
-  // function characterType() {
-  //   generateBtn = confirm("Include lowercase letters?")
-  // }
-  //   if (minLength < 8) {
+  // var critMet = confirm("Generate password");
+  // do {
+  //   generatePassword();
+  // } while(i = length) {
+  // if(lowLet = true) || (upLet = true) || (num = true) || (spCh = true);
+    
+  // } 
 
-  //     console.log("Password must be at least 8 characters.");
-  //     return "Password must be at least 8 characters."
   // }
-  //   if (maxLenth > 128) {
-  //     console.log("Password may not exceed 128 characters.");
-  // }
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
 
-function generatePassword() {}
+function generatePassword() {
+  do {
+    
+  ;
+  } while(Array.length = length) {
+  if(lowLet = true) || (upLet = true) || (num = true) || (spCh = true);
+    
+  } 
+
+  }
+
+  // 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
