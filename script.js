@@ -3,11 +3,8 @@
 var minLength = 8;
 var maxLenth = 128;
 // List of user password criteria and length
-var userCrit = [];
 var userlength;
-var chCritMet = false;
 // Newly generated array
-var newArray = [];
 // Add arrays of criteria
 var lChArr = ["a", "b", "c", "d", "e", "f'", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
 var upChArr = [ "a", "b", "c", "d", "e", "f'", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
@@ -21,11 +18,14 @@ var expression2 = maxLenth >= minLength;
 // Gather password criteria
 function gatherCrit() {
   // Create boolean variable
+  // Changed variables from global to local
   var validPasswordLength = false;
+  var chCritMet = false;
+  var userCrit = [];
   //Repeating loop till criteria is met
   while (validPasswordLength == false) {
     // Passing a string through the function prompt which returns a value that is saved to userlength
-    var userlength = prompt("Enter password length. Must be between 8-128 characters in length.");
+    userlength = prompt("Enter password length. Must be between 8-128 characters in length.");
     if (userlength >= minLength && userlength <= maxLenth) {
       validPasswordLength = true;
     } else {
@@ -39,28 +39,28 @@ function gatherCrit() {
     var lowLet = confirm("Include lowercase letters");
     // if the user wants lowercase letters, add "lower" to criteria array
     if (lowLet == true) {
-      userCrit.concat(lChArr);
+      userCrit = userCrit.concat(lChArr);
     }
     // Passing string through the function confirm which returns a boolean value that is stored in its assigned var
     var upLet = confirm("Include uppercase letters");
     // / if the user wants uppercase letters,
     if (upLet == true) {
       // add "upper" to criteria array
-      userCrit.concat(upChArr);
+      userCrit = userCrit.concat(upChArr);
     }
     // Passing string through the function confirm which returns a boolean value that is stored in its assigned var
     var num = confirm("Include numbers");
     // / if the user wants numbers,
     if (num == true) {
       // add "number" to criteria array
-      userCrit.concat(intArr);
+      userCrit = userCrit.concat(intArr);
     }
     // Passing string through the function confirm which returns a boolean value that is stored in its assigned var
     var spCh = confirm("Include special character");
     // if the user wants special characters,
     if (spCh == true) {
       // add "special" to criteria array
-      userCrit.concat(spChArr);
+      userCrit = userCrit.concat(spChArr);
     }
 
     if (lowLet == true || upLet == true || num == true || spCh == true) {
@@ -69,25 +69,29 @@ function gatherCrit() {
       alert("At least one character criteria must be selected.");
     }
   }
+  // Add return 
+  return {userlength, userCrit}
 }
 
 function generatePassword() {
-  // newArray = userCrit.length;
-  // userCrit.length = userlength.splice();
-  userCrit.length = userlength;
-
+  // Changed var to local
+  var newArray = [];
+  var options = gatherCrit();
+  console.log(options);
   
-  for (var i = 0; i < userlength; i++) {
-    newArray.length = Math.floor(Math.random() * userCrit.length);
+  for (var i = 0; i < options.userlength; i++) {
+    // Use push reference
+    newArray.push(options.userCrit[Math.floor(Math.random()*options.userCrit.length)]);
 
 }
+// Add return and removed commas with ''
+return newArray.join('')
 }
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 
 function writePassword() {
-  gatherCrit();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
