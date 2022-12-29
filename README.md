@@ -16,7 +16,7 @@ In order to generate a random password, employees are able to use this website.
 
 I first used psuedo-code to plan which functions would be necessary. The first step was to create a prompt and confirms in a function that required employees to select their password  criteria. Since employees are required to create passwords with specific lengths and at least one character criteria, I included the prompt and confirms with a "while." The while will loop each question the previous one if the criteria requirements aren't satified.
 
-
+Although I had completed the necessary code to collect user criteria preferences, the website would not display the randomly generated password. This was for twa few reasons. to begin with, some variables that were global needed to be local so that the information that was input would clear each time the page was refreshed. Secondly, the arrays that were being joined via concat were not properly formatted with an equal sign (=) to allow for the other arrays to be stored there. Thirdly, the functions were not referencing each other since I did not add returns. Once varying portions of my code were able to reference one another, the website worked!
 
 ## Portfolio Example
 
