@@ -20,7 +20,7 @@ Although I had completed the necessary code to collect user criteria preferences
 
 ## Portfolio Example
 
-Below, I added the and if requirements.
+Below, I added the while and if requirements.
 
 
 ```function gatherCrit() {
